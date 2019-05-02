@@ -46,7 +46,7 @@ $(document).ready(function() {
       var emptyAlert = $(
         [
           "<div class='alert bg-primary text-center'>",
-          "<h4>Uh Oh. Looks like we don't have any new articles.</h4>",
+          "<h4>No New Articles</h4>",
           "</div>",
         ].join("")
       );

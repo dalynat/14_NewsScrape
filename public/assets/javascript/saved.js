@@ -32,8 +32,8 @@ $(document).ready(function() {
           $("<a class='article-link' target='_blank' rel='noopener noreferrer'>")
             .attr("href", article.url)
             .text(article.headline),
-          $("<a class='btn btn-dark delete' style='color: white'>Delete From Saved</a>"),
-          $("<a class='btn btn-dark notes' style='color: white'>Article Notes</a>")
+          $("<a class='btn btn-dark delete' style='color: white'>Delete</a>"),
+          $("<a class='btn btn-dark notes' style='color: white'>Notes</a>")
         )
       );
   
@@ -49,7 +49,7 @@ $(document).ready(function() {
       var emptyAlert = $(
         [
           "<div class='alert bg-primary text-center'>",
-          "<h4>Uh Oh. Looks like we don't have any saved articles.</h4>",
+          "<h4>No Saved Articles.</h4>",
           "</div>",
         ].join("")
       );
@@ -60,7 +60,7 @@ $(document).ready(function() {
       var notesToRender = [];
       var currentNote;
       if (!data.notes.length) {
-        currentNote = $("<li class='list-group-item'>No notes for this article yet.</li>");
+        currentNote = $("<li class='list-group-item'>No Notes.</li>");
         notesToRender.push(currentNote);
       } else {
         for (var i = 0; i < data.notes.length; i++) {
@@ -100,7 +100,7 @@ $(document).ready(function() {
           $("<hr>"),
           $("<ul class='list-group note-container'>"),
           $("<textarea placeholder='New Note' rows='4' cols='60'>"),
-          $("<button class='btn btn-dark save' style='color: white'>Save Note</button>")
+          $("<button class='btn btn-dark save' style='color: white'>Save</button>")
         );
         bootbox.dialog({
           message: modalText,
